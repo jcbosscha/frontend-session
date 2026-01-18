@@ -1,0 +1,72 @@
+<div class="container py-4">
+    <div class="jumbotron">
+    <h1 class="mb-1">{{ title }}</h1>
+
+    <p>This component is a working Angular standalone component with some basic UI interactions. The behavior is correct, but the TypeScript code was written quickly and without much attention to type safety or structure.</p>
+    <p>Take some time to review the TypeScript and improve it where you see fit. The goal is to make the code easier to reason about, safer to change, and more in line with how you would normally write TypeScript in a production Angular application.</p>
+    <p>Try to preserve the existing behavior and UI while focusing on improving the quality of the TypeScript itself.</p>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="p-3 border rounded">
+        <h5>Controls</h5>
+
+        <label class="form-label">Raw value</label>
+        <input
+          class="form-control"
+          [value]="rawValue"
+          (input)="onTextInput($event)"
+        />
+
+        <div class="mt-3">
+          <label class="form-label">Prefix</label>
+          <input
+            class="form-control"
+            [value]="prefix"
+            (input)="onPrefixInput($event)"
+          />
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label">Mode</label>
+          <select class="form-select" [value]="mode" (change)="onModeChange($event)">
+            <option value="echo">echo</option>
+            <option value="upper">upper</option>
+            <option value="stats">stats</option>
+          </select>
+        </div>
+
+        <div class="mt-3 d-flex gap-2 flex-wrap">
+          <button class="btn btn-primary" (click)="run()">Run</button>
+          <button class="btn btn-outline-secondary" (click)="toggleFlag()">
+            Toggle flag
+          </button>
+          <button class="btn btn-outline-danger" (click)="reset()">Reset</button>
+        </div>
+
+        <div class="mt-3">
+          <span class="badge bg-info text-dark me-2">flag</span>
+          <span
+            [class.text-success]="flag == true"
+            [class.text-danger]="flag == false"
+          >
+            {{ flag }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="p-3 border rounded">
+        <h5>Output</h5>
+
+        <div class="small text-muted mb-2">Computed</div>
+        <pre class="output">{{ output }}</pre>
+
+        <div class="small text-muted mt-3 mb-2">Debug</div>
+        <pre class="debug">{{ debugDump }}</pre>
+      </div>
+    </div>
+  </div>
+</div>

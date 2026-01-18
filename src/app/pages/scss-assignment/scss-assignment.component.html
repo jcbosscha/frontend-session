@@ -1,0 +1,83 @@
+<div class="container mt-5">
+
+  <div class="jumbotron">
+    <h1 class="display-4">Oh no! Ugly css!</h1>
+    <p class="lead"></p>
+
+    <p>This page uses basic Bootstrap classes for layout. The styling itself is handled by a CSS file that has grown
+      organically and is no longer easy to work with.
+      <span class="text-extra">(I know it isn't a large file, but imagine it is <span class="emoji">🙂</span>)</span>
+    </p>
+    <p>Have a look at the styles and see how you would approach improving them using SCSS. The goal is to make the
+      styling easier to understand and maintain, without changing the HTML structure or the visual outcome.</p>
+
+    <p>There is no single “correct” solution — focus on clarity, consistency, and how comfortable the code would be to
+      work with in a larger project.</p>
+  </div>
+
+  <div class="row g-4 content-container">
+
+    <div class="col-md-6 col-lg-3">
+      <div class="block block-one">
+        <div class="card-item">
+          <h3>Assignment A</h3>
+          <p>This is the first test assignment.</p>
+          <button>Start</button>
+        </div>
+        <div class="card-item">
+          <h3>Assignment B</h3>
+          <p>Another assignment to try.</p>
+          <button>Start</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="block block-two">
+        <div class="card-item">
+          <h3>Assignment C</h3>
+          <p>Practice layout and styling.</p>
+          <button>Open</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="block block-three">
+        <div class="card-item">
+          <h3>Assignment D</h3>
+          <p>Work with colors and spacing.</p>
+          <button>View</button>
+        </div>
+        <div class="card-item">
+          <h3>Assignment E</h3>
+          <p>Clean up this CSS.</p>
+          <button>View</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="block block-four">
+        <div class="card-item">
+          <h3>Assignment F</h3>
+          <p>Final test assignment.</p>
+          <button>Go</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br /><br />
+  <p>
+    <button (click)="collapseExample()" class="btn btn-success">
+      Check output example
+    </button>
+  </p>
+  <div class="{{isExampleCollapsed ? 'collapse' : 'show'}}" id="collapseExample">
+    <div class="card card-body">
+      <img src="assets/scss-example.png" alt="SCSS Assignment" class="img-fluid mt-4" />
+    </div>
+  </div>
+
+</div>
